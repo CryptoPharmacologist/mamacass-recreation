@@ -19,8 +19,14 @@ nav{
     display: flex;
     justify-content: space-between;
     gap: 25px;
-    align-items: center;    
+    align-items: center;   
 }
+
+.li{
+    text-decoration: none;
+    list-style: none;
+}
+
 ul{
     display: flex;
     list-style: none;
@@ -225,18 +231,30 @@ ul{
     color:#660712;
 }
 .legacybottom h3{
-    display: flex;
     justify-content: center;
     font-size: 25px;
 }
-.legacybottom h4{
-    font-size:15px;
-    display: flex;
+.legacybottom p {
+    font-size:14px;
     color: #070707;
-    justify-content: center;
+    justify-content: center;   
+    margin-top:20px;
 }
 .legacycontent h3{
     font-size:50px;
     color:#660712;
     
+}
+.branchcontainer{
+   
+}
+ .branchimage{
+  
+}
+.branchcontent{
+    
+}
+
+.branchbutton{
+
 }
