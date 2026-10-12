@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <p class="selectedproduct text-sm mt-2"></p>
+    <div class="productcontainer grid grid-cols-3 gap-6 p-6">
+        <div class="productcard bg-gray-300 border border-black rounded-lg p-2 min-h-60 w-40"
+        data-name="Noble Rice Extra">
+            <div class="h-40 w-full">
+                <img src="/mamacass/assets/asun rice.jpg"
+                class="h-full w-full object-cover"
+                />
+    
+            </div>
+           <h3 class="producttext text-sm font-semibold text-red-500 mb-1 ">Noble Rice Extra
+           </h3>
+           <p class="productprice text-sm text-red-900">₦5,000.00</p>
+
+           <button class="productbtn border rounded-lg px-2 cursor-pointer bg-white
+                text-sm font-semibold text-black border-gray">In Stock
+
+            </button>
+            <button class="selectbtn border rounded-lg px-2 cursor-pointer
+                   text-sm font-semibold text-black bg-white border-3 border-transparent border-gray">Select
+                   Product
+
+                </button>
+                 
+
+
+        </div>
+
+        <div class="productcard bg-gray-300 border border-black rounded-lg p-2 min-h-60 w-40" data-name="Asun Rice">
+           <div class="h-40 w-full">
+                <img src="/mamacass/assets/noble rice extra.jpg" 
+                class="w-full h-full object-cover"/>
+            </div>
+                <h3 class="producttext text-sm font-semibold text-red-500 mb-1 ">Asun Rice
+                </h3>
+            
+                <p class="productprice text-sm text-red-900">₦7,000.00</p>
+                <button class="productbtn border rounded-lg px-2 cursor-pointer
+                   text-sm font-semibold text-black bg-white border-gray">In Stock
+
+                </button>
+                 <button class="selectbtn border rounded-lg px-2 cursor-pointer
+                   text-sm font-semibold text-black bg-white border-3 border-transparent border-gray">Select
+                   Product
+
+                </button>
+                
+
+            
+
+        </div>
+        <div class="productcard bg-gray-300 border border-black rounded-lg p-2 min-h-60 w-40" data-name="Moi Moi">
+            <div class="h-40 w-full">
+                <img src="/mamacass/assets/moi moi.jpg" 
+                class="w-full h-full object-cover"/>
+
+            </div>
+                <h3 class="producttext text-sm font-semibold text-red-500 mb-1">Moi Moi
+                </h3>
+                <p class="productprice text-sm text-red-900">₦4,000.00</p>
+                <button class="productbtn border rounded-lg px-2 cursor-pointer
+                        text-sm font-semibold text-black border-gray  bg-white">In Stock
+
+                </button> 
+                <button class="selectbtn border rounded-lg px-2 cursor-pointer
+                   text-sm font-semibold text-black bg-white border-3 border-transparent border-gray">Select
+                   Product
+
+                </button>
+
+                
+
+        </div>
+       
+
+    </div>
+    <style>
+        .productcard.selected {
+        border: 2px solid #2563eb;
+        box-shadow: 0 0 0 4px rgb(59 130 246 / 30%);
+        }
+    </style>
+     
+
+    
+    <script>
+        //const productcards=document.querySelectorAll(".productcard")
+        //productcards.forEach(function(productcard) {
+           // console.log(productcard)
+            //productcard.addEventListener("click",()=>{
+                //productcard.classList.toggle("border-2");
+                //productcard.classList.toggle("border-blue-300");
+              //  productcard.classList.toggle("border-black")
+            //});
+       // const productbtns=document.querySelectorAll(".productbtn")
+        //productbtns.forEach(function(productbtn){
+          //  productbtn.addEventListener("click",()=> {
+               // if(productbtn.textContent.trim()==="In Stock"){
+                   // productbtn.textContent="Out of Stock";
+                    //productbtn.style.color="red"
+              //  }
+               // else{
+                   // productbtn.textContent="In Stock";
+                    //productbtn.style.color="green";
+              //  const InStock=productbtn.textContent.trim()==="In Stock";
+               // productbtn.textContent=InStock ? "Out of Stock" : "In Stock";
+                //productbtn.style.color=InStock ? "red" : "green";
+                
+            //    });
+
+          //  });
+        //});
+
+        const productcards=document.querySelectorAll(".productcard")
+        const selectedproduct=document.querySelector(".selectedproduct")
+        productcards.forEach(function(productcard){
+            const selectbtn=productcard.querySelector(".selectbtn");
+            selectbtn.addEventListener("click",()=>{
+                if (productcard.classList.contains("selected")) { 
+                    productcard.classList.remove("selected"); 
+                    selectbtn.textContent = "Select Product"; 
+                    selectedproduct.textContent="No Product Selected"
+                }
+
+                     else { 
+                        productcards.forEach((productcard) => { 
+                        productcard.classList.remove("selected"); 
+                        const productbtn = productcard.querySelector(".selectbtn"); 
+                        productbtn.textContent = "Select Product"; }); 
+                        productcard.classList.add("selected"); 
+                        selectbtn.textContent = "Selected"; 
+                    selectedproduct.textContent=
+                    `Selected product: ${productcard.dataset.name}`;
+                        }
+                   
+                });
+     
+                    });
+
+
+
+    
+
+
+    </script>
+    
+</body>
+</html>

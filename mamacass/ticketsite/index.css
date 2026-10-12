@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.signuppage{
+    display:grid;
+    grid-template-columns: 38% 62%; 
+    
+}
+.companydetails{
+    background-color: #17213d;
+    color: #fff;
+    padding:40px;   
+    min-height: 100vh; 
+    background-image:
+        radial-gradient(
+            ellipse 4px 1px at center,
+            #263455 100%,
+            transparent 100%
+        ),
+        radial-gradient(
+            ellipse 1px 4px at center,
+            #263455 100%,
+            transparent 100%
+        );
+
+    background-size: 40px 40px;
+    background-repeat: repeat;
+
+    background-size: 40px 40px;
+}
+
+.companymotto{
+    margin-top:100px;
+}
+.companymotto h1 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+.logo img{
+    height:auto;
+    width:155px;
+}
+.benefit{
+    margin-top:30px;
+}
+.benefitcard{
+    display:flex;
+    gap:18px;
+    margin-bottom:20px;
+}
+.benefiticon svg{
+    width:21px;
+    height:21px;
+}
+.benefitcontent h3 {
+    margin-bottom: 2px;
+}
+
+.benefitcontent p {
+    color: #aeb8d0;
+    font-size: 16px;
+    line-height: 1.2;
+}
+.sponsored {
+    margin-top: 50px;
+}
+
+.sponsoredline{
+    width: 100%;
+    height: 1px;
+    background-color: #34405d;
+    margin-bottom: 35px;
+}
+
+.sponsored p {
+    color: #8290b0;
+    font-size: 12px;
+}
+.copyright {
+    margin-top: 200px;
+}
+
+.copyright p {
+    color: #8290b0;
+    font-size: 15px;
+}
+.signupform{
+   background:  #0B0F19;
+   color:#fff;
+   padding:55px;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+}
+.signupform form{
+    max-width:400px;
+}
+.formgroup{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top:15px;
+    font-weight:400;
+}
+input,
+select{
+    width:100%;
+    padding:10px 15px;
+    background: #151515;
+    border: 1px solid #2d2d2d;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+}
+input::placeholder {
+    color: #858585;
+}
+.formheading{
+    margin-bottom:30px;
+}
+.formheading h2{
+    font-size:32px;
+    margin-bottom:8px; 
+}
+.formheading p{
+    color: #aeb8d0;
+    font-size: 18px;
+}
+label span{
+    color:red;
+}
+
+.formbutton{
+    width:100%;
+    padding:15px 25px;
+    color:#fff;
+    background: orangered;
+    border:1px solid orangered;
+    border-radius:10px;
+    font-size: 16px;
+    margin-top:40px;
+    font-weight:400;
+    cursor:pointer;
+
+}
+
+.googlebutton img{
+    height:24px;
+    width:24px;
+}
+.googlebutton{
+    width:100%;
+    height:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+    cursor:pointer;
+    font-size:16px;
+
+}
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background-color: #3b3b3b;
+}
+
+.divider p {
+    color: #777;
+}
+
+.terms {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.terms p {
+    color: #7e8494;
+    font-size: 14px;
+}
+
+.terms a {
+    color: #626b7d;
+    text-decoration: underline;
+}
+
+.signin {
+    margin-top: 38px;
+    text-align: center;
+}
+
+.signin p {
+    color: #aeb8d0;
+    font-size:16px;
+}
+
+.signin a {
+    color: #ff6842;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.chatbutton {
+    position: fixed;
+    right: 40px;
+    bottom: 35px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 1px solid #71331f;
+
+    background-color: #111;
+    color: #ff6842;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+@media (max-width:768px) {
+     .signuppage{
+        grid-template-columns: 1fr;
+     }
+     .companydetails{
+        padding:20px;
+     }
+     .companymotto h1{
+        font-size:25px;
+     }
+
+}

@@ -30,9 +30,12 @@ li{
     list-style-type: none;
 }
 
-li a{
+.navright a{
     text-decoration: none;
     color: black;
+}
+.navright a:hover {
+    color: #951e09;
 }
 
 ul{
@@ -559,10 +562,11 @@ ul{
     padding:8px 12px;
     color:#fff;
     background: rgba(0, 128, 36, 0.879);
-    border:1px solid rgba(0, 128, 36, 0.879);
-    border-radius:10px;
+    border:1px solid rgba(0, 128, 36, 0);
+    border-radius:20px;
     font-size: 16px;
     margin-bottom:20px;
+
 }
 
 
